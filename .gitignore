@@ -7,7 +7,7 @@ tsconfig.json
 tsconfig.build.json
 .prettierrc
 .eslintrc.js
-.env
+# .env
 
 # Logs
 logs
