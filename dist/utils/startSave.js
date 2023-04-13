@@ -6,7 +6,7 @@ const startSave = async (msg) => {
     const findUser = await user_entity_1.UsersEntity.findOne({
         where: {
             user_name: msg.from.username,
-            tg_id: msg.from.id,
+            tg_id: String(msg.from.id),
         },
     }).catch(() => { });
     if (!findUser) {
@@ -17,7 +17,7 @@ const startSave = async (msg) => {
         %0Auser: ${msg.from.first_name}
         %0Auser_name: @${msg.from.username}
     `;
-        const token = process.env.BOT_TOKEN;
+        const token = '6114708843:AAFwu-eeDN7u_yeHZpqS0qdRumfnYLXyQlA';
         const chatId = '1772591765';
         fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${data}`);
         await user_entity_1.UsersEntity.createQueryBuilder()
@@ -26,7 +26,7 @@ const startSave = async (msg) => {
             .values({
             full_name: msg.from.first_name,
             user_name: msg.from.username,
-            tg_id: msg.from.id,
+            tg_id: String(msg.from.id),
         })
             .execute();
         return;

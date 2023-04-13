@@ -8,12 +8,20 @@ typeorm_1.myDataSource
     .initialize()
     .then(() => console.log('Baza Connect!!!'))
     .catch((err) => console.error(err));
-const BOT_TOKEN = '6114708843:AAFwu-eeDN7u_yeHZpqS0qdRumfnYLXyQlA';
+const BOT_TOKEN = '6162540016:AAHdcbDrfqqNPOqRPAu5oCtMsMQ5EFmQQ2Q';
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     if (msg.text == '/start') {
-        const resp = 'Assalomu Aleykum Instagram link jonating';
+        const resp = `Assalomu alaykum, ${msg.from.first_name}
+
+🔥 Xush kelibsiz, Bot orqali yuklab olishingiz mumkin:
+    
+• Instagram - stories, post;
+• TikTok - suv belgisiz video;
+
+🚀 Media yuklashni boshlash uchun uning havolasini yuboring.
+    `;
         (0, startSave_1.startSave)(msg);
         return bot.sendMessage(chatId, resp);
     }

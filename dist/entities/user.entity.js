@@ -19,11 +19,11 @@ __decorate([
 ], UsersEntity.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)({
-        type: 'integer',
+        type: 'text',
         nullable: false,
         unique: true,
     }),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], UsersEntity.prototype, "tg_id", void 0);
 __decorate([
     (0, typeorm_1.Column)({
