@@ -27,6 +27,7 @@ bot.on('message', (msg) => {
     }
     if (msg.text.split('m/')[0] == 'https://www.instagram.co') {
         (0, videoDownload_1.videoDownload)(msg, bot);
+        console.log('a');
         return;
     }
     bot.sendMessage(chatId, "Kechirasiz ma'lumot hato");

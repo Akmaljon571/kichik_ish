@@ -30,7 +30,7 @@ exports.insta = {
             url: 'https://instagram-media-downloader.p.rapidapi.com/rapid/post.php',
             params: { url: link },
             headers: {
-                'X-RapidAPI-Key': '86e05fddcdmshfe1657076d0597ap18dcd5jsn0cd27df836cc',
+                'X-RapidAPI-Key': '08b6c4f1bfmsh0e008950e27d853p1d6e2ejsnadef35fc0e17',
                 'X-RapidAPI-Host': 'instagram-media-downloader.p.rapidapi.com'
             }
         };
@@ -41,7 +41,7 @@ exports.insta = {
             url: 'https://instagram-media-downloader.p.rapidapi.com/rapid/post.php',
             params: { url: link },
             headers: {
-                'X-RapidAPI-Key': '86e05fddcdmshfe1657076d0597ap18dcd5jsn0cd27df836cc',
+                'X-RapidAPI-Key': '884e3c42f8msh736d35482fd9673p13ae94jsn94f120ffefd2',
                 'X-RapidAPI-Host': 'instagram-media-downloader.p.rapidapi.com'
             }
         };
