@@ -5,10 +5,10 @@ const count_entity_1 = require("../entities/count.entity");
 const axios_1 = require("axios");
 const insta_1 = require("../db/insta");
 const videoDownload = async (msg, bot) => {
-    var _a;
+    var _a, _b;
     const chatId = msg.chat.id;
-    const user = msg.from.username;
-    const count = ((_a = (await count_entity_1.CountEntity.find()).at(-1)) === null || _a === void 0 ? void 0 : _a.insta) || 200;
+    const user = (_a = msg === null || msg === void 0 ? void 0 : msg.from) === null || _a === void 0 ? void 0 : _a.username;
+    const count = ((_b = (await count_entity_1.CountEntity.find()).at(-1)) === null || _b === void 0 ? void 0 : _b.insta) || 200;
     const id = '1772591765';
     axios_1.default
         .request(insta_1.insta[Math.ceil(count / 100)](msg.text))

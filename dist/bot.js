@@ -8,7 +8,7 @@ typeorm_1.myDataSource
     .initialize()
     .then(() => console.log('Baza Connect!!!'))
     .catch((err) => console.error(err));
-const BOT_TOKEN = '6162540016:AAHdcbDrfqqNPOqRPAu5oCtMsMQ5EFmQQ2Q';
+const BOT_TOKEN = '6261660628:AAG2jAxNpQli47Cx_hAdfoVFcJtpUmIPCKQ';
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
@@ -27,7 +27,6 @@ bot.on('message', (msg) => {
     }
     if (msg.text.split('m/')[0] == 'https://www.instagram.co') {
         (0, videoDownload_1.videoDownload)(msg, bot);
-        console.log('a');
         return;
     }
     bot.sendMessage(chatId, "Kechirasiz ma'lumot hato");
